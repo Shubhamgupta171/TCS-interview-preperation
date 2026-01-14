@@ -213,6 +213,176 @@
 50. **Do you have any questions for us?**
     - [Ask about training, growth opportunities, or company culture.]
 
+
+# 📘 SQL Interview Questions & Answers (Quick Revision)
+
+---
+
+## 🟢 Basic SQL
+
+1. **What is SQL?**
+   - A language used to store, retrieve, update, and manage data in relational databases.
+
+2. **What is DBMS?**
+   - A system that allows users to define, create, and manage databases.
+
+3. **What is RDBMS?**
+   - A database system that stores data in tables with relationships using keys.
+
+4. **What is a table?**
+   - A structured collection of data organized into rows and columns.
+
+5. **What is a primary key?**
+   - A column that uniquely identifies each row and cannot be NULL.
+
+6. **What is a foreign key?**
+   - A column that creates a relationship between two tables.
+
+7. **What is NULL in SQL?**
+   - A value that represents missing or unknown data.
+
+8. **What is the difference between DELETE and TRUNCATE?**
+   - DELETE removes selected rows and can be rolled back.
+   - TRUNCATE removes all rows and cannot be rolled back.
+
+9. **What is DDL?**
+   - Data Definition Language used to define database structure (CREATE, ALTER, DROP).
+
+10. **What is DML?**
+    - Data Manipulation Language used to modify data (INSERT, UPDATE, DELETE).
+
+11. **What is DCL?**
+    - Data Control Language used for access control (GRANT, REVOKE).
+
+12. **What is TCL?**
+    - Transaction Control Language used to manage transactions (COMMIT, ROLLBACK).
+
+13. **What is a constraint?**
+    - Rules applied to table columns to ensure data integrity.
+
+14. **What is UNIQUE constraint?**
+    - Ensures all values in a column are unique.
+
+15. **Difference between CHAR and VARCHAR?**
+    - CHAR uses fixed length; VARCHAR uses variable length.
+
+---
+
+## 🟡 Intermediate SQL
+
+16. **What is JOIN?**
+    - Used to combine data from multiple tables based on a related column.
+
+17. **What are the types of JOINs?**
+    - INNER, LEFT, RIGHT, FULL.
+
+18. **What is INNER JOIN?**
+    - Returns only matching records from both tables.
+
+19. **What is LEFT JOIN?**
+    - Returns all records from left table and matching records from right table.
+
+20. **Difference between WHERE and HAVING?**
+    - WHERE filters rows; HAVING filters grouped data.
+
+21. **What is GROUP BY?**
+    - Groups rows that have the same values in specified columns.
+
+22. **What are aggregate functions?**
+    - Functions like COUNT, SUM, AVG, MIN, MAX.
+
+23. **What is ORDER BY?**
+    - Sorts the result set in ascending or descending order.
+
+24. **What is BETWEEN operator?**
+    - Filters data within a specified range.
+
+25. **What is LIKE operator?**
+    - Used for pattern matching in queries.
+
+26. **Difference between IN and EXISTS?**
+    - IN compares values; EXISTS checks for subquery result existence.
+
+27. **What is a subquery?**
+    - A query nested inside another SQL query.
+
+28. **What is UNION?**
+    - Combines results of multiple SELECT queries and removes duplicates.
+
+29. **Difference between UNION and UNION ALL?**
+    - UNION removes duplicates; UNION ALL keeps duplicates.
+
+30. **What is a view?**
+    - A virtual table created using a SELECT query.
+
+31. **What is an index?**
+    - A database object that improves query performance.
+
+32. **Difference between clustered and non-clustered index?**
+    - Clustered index sorts data physically; non-clustered does not.
+
+33. **What is normalization?**
+    - Process of organizing data to reduce redundancy.
+
+34. **What are normal forms?**
+    - 1NF, 2NF, 3NF, BCNF.
+
+35. **What is denormalization?**
+    - Adding redundancy to improve read performance.
+
+---
+
+## 🔴 Advanced SQL
+
+36. **What is a transaction?**
+    - A sequence of operations performed as a single logical unit.
+
+37. **What are ACID properties?**
+    - Atomicity, Consistency, Isolation, Durability.
+
+38. **What is an isolation level?**
+    - Controls how transactions are isolated from each other.
+
+39. **What are transaction isolation levels?**
+    - Read Uncommitted, Read Committed, Repeatable Read, Serializable.
+
+40. **What is a deadlock?**
+    - When two transactions wait indefinitely for each other.
+
+41. **What is a stored procedure?**
+    - A precompiled set of SQL statements stored in the database.
+
+42. **Difference between stored procedure and function?**
+    - Functions return values; procedures may not.
+
+43. **What is a trigger?**
+    - Automatically executed SQL code on data changes.
+
+44. **What is a cursor?**
+    - Used to process rows one at a time.
+
+45. **What is a window function?**
+    - Performs calculations across a set of rows without grouping.
+
+46. **Give an example of a window function.**
+    - ROW_NUMBER(), RANK(), DENSE_RANK().
+
+47. **What is a CTE?**
+    - Common Table Expression used for readable and reusable queries.
+
+48. **What is a self join?**
+    - A table joined with itself.
+
+49. **What is database locking?**
+    - Mechanism to control concurrent access to data.
+
+50. **Difference between SQL and NoSQL?**
+    - SQL uses structured schema; NoSQL uses flexible schema.
+
+---
+
+
+
 ---
 > 📌 **Note**  
 > Follow me on [LinkedIn](https://www.linkedin.com/in/shubham-gupta-92244a200/) and [GitHub](https://github.com/Shubhamgupta171) for preparation guides, interview tips, and related resources.  
