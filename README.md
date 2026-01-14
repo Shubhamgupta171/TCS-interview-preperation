@@ -382,6 +382,242 @@
 ---
 
 
+# 📘 Backend & System Design Interview Questions (With Examples)
+
+---
+
+## 🟢 Backend Fundamentals
+
+1. **What is Backend Development?**
+   - Backend handles business logic, database operations, authentication, and APIs.
+   - Example: Login validation, storing user data, generating reports.
+
+2. **What is Client–Server Architecture?**
+   - Client sends requests, server processes them and sends responses.
+   - Example: Browser (client) → API (server) → Database → Response.
+
+3. **What is an API?**
+   - API is a contract that allows two systems to communicate.
+   - Example: Frontend calls `/login` API to authenticate users.
+
+4. **What is REST API?**
+   - REST is an architectural style using HTTP methods.
+   - Example:
+     - GET `/users`
+     - POST `/login`
+
+5. **What does Stateless mean?**
+   - Server does not store client session state.
+   - Example: JWT token sent with every request.
+
+---
+
+## 🟡 Authentication & Security
+
+6. **What is Authentication?**
+   - Process of verifying user identity.
+   - Example: Username + password → login success.
+
+7. **What is Authorization?**
+   - Process of checking user permissions.
+   - Example: Admin can delete users, normal user cannot.
+
+8. **What is JWT?**
+   - JSON Web Token used for stateless authentication.
+   - Example: Token issued at login, verified on each request.
+
+9. **Why JWT is faster than session-based auth?**
+   - No DB lookup needed; token verification is cryptographic.
+
+10. **What is OAuth?**
+    - Authorization framework for third-party access.
+    - Example: Login with Google / GitHub.
+
+---
+
+## 🟡 Performance & Scalability
+
+11. **What is Caching?**
+    - Storing frequently accessed data in memory.
+    - Example: Redis cache for dashboard stats.
+
+12. **What is Cache Hit and Cache Miss?**
+    - Cache Hit: Data found in cache.
+    - Cache Miss: Data fetched from DB and stored in cache.
+
+13. **What is Load Balancer?**
+    - Distributes traffic across multiple servers.
+    - Example: Nginx, AWS ALB.
+
+14. **What is Horizontal Scaling?**
+    - Adding more servers to handle traffic.
+    - Example: 1 server → 5 servers.
+
+15. **What is Vertical Scaling?**
+    - Increasing CPU/RAM of a server.
+
+---
+
+## 🟡 Databases & Storage
+
+16. **What is Database Indexing?**
+    - Index improves search performance.
+    - Example: Index on `email` column for fast lookup.
+
+17. **Why indexes slow down writes?**
+    - Index needs to be updated on INSERT/UPDATE.
+
+18. **What is Connection Pooling?**
+    - Reusing DB connections.
+    - Example: 10 connections shared across requests.
+
+19. **What is ACID?**
+    - Atomicity, Consistency, Isolation, Durability.
+    - Example: Bank transaction must be fully completed or rolled back.
+
+20. **What is Database Transaction?**
+    - Group of operations executed as one unit.
+
+---
+
+## 🔴 Advanced Backend Concepts
+
+21. **What is Asynchronous Processing?**
+    - Non-blocking execution of tasks.
+    - Example: Sending email after API response.
+
+22. **What is Background Job?**
+    - Long-running tasks executed outside request lifecycle.
+    - Example: OCR processing, report generation.
+
+23. **What is Message Queue?**
+    - Decouples producers and consumers.
+    - Example: API pushes job → worker processes it.
+
+24. **What is Rate Limiting?**
+    - Restricts number of requests per user.
+    - Example: 100 requests/minute per IP.
+
+25. **What is Circuit Breaker Pattern?**
+    - Prevents repeated calls to failing services.
+    - Example: Stop calling OCR API if it is down.
+
+---
+
+## 🔴 System Design Concepts
+
+26. **What is System Design?**
+    - Designing scalable, reliable, and maintainable systems.
+    - Example: Designing URL shortener, chat system.
+
+27. **What is High Availability?**
+    - System remains operational even if one server fails.
+    - Example: Multiple backend replicas.
+
+28. **What is Fault Tolerance?**
+    - System continues working despite failures.
+    - Example: Retry mechanisms, fallbacks.
+
+29. **What is CAP Theorem?**
+    - Consistency, Availability, Partition tolerance.
+    - Distributed systems choose any two.
+
+30. **What is Microservices Architecture?**
+    - Application split into small independent services.
+    - Example: Auth service, Payment service.
+
+---
+
+## 🔴 APIs & Communication
+
+31. **What is API Gateway?**
+    - Entry point for all client requests.
+    - Handles auth, rate limiting, routing.
+
+32. **What is WebSocket?**
+    - Persistent connection for real-time communication.
+    - Example: Live chat, real-time alerts.
+
+33. **Difference between REST and WebSocket?**
+    - REST: Request–response.
+    - WebSocket: Continuous bi-directional connection.
+
+34. **What is gRPC?**
+    - High-performance RPC framework using Protobuf.
+    - Faster than REST for internal services.
+
+35. **What is Idempotency?**
+    - Multiple identical requests give same result.
+    - Example: Payment API with idempotency key.
+
+---
+
+## 🔴 Monitoring & Reliability
+
+36. **What is Logging?**
+    - Recording system events.
+    - Example: Error logs, access logs.
+
+37. **What is Monitoring?**
+    - Tracking system health.
+    - Example: CPU, memory, latency metrics.
+
+38. **What is Observability?**
+    - Logs + metrics + traces to understand system behavior.
+
+39. **What is a Health Check Endpoint?**
+    - API to verify service health.
+    - Example: `/health → 200 OK`.
+
+40. **What is SLA, SLO, and SLI?**
+    - SLA: Agreement
+    - SLO: Objective
+    - SLI: Measurement
+
+---
+
+## 🔴 Security & Best Practices
+
+41. **What is CORS?**
+    - Controls cross-origin requests.
+    - Example: Frontend domain allowed to call backend.
+
+42. **What is CSRF?**
+    - Attack using authenticated user’s session.
+    - Prevention: CSRF tokens.
+
+43. **What is SQL Injection?**
+    - Malicious SQL queries via input.
+    - Prevention: Prepared statements.
+
+44. **What is HTTPS?**
+    - Encrypted communication using TLS.
+
+45. **What is Secrets Management?**
+    - Secure storage of API keys and passwords.
+    - Example: Environment variables, Vault.
+
+---
+
+## 🔴 Real-World Design Scenarios
+
+46. **How do you design a login system?**
+    - Password hashing → JWT → role-based access.
+
+47. **How do you design a file upload system?**
+    - Upload → validate → store (S3) → async processing.
+
+48. **How do you design a notification system?**
+    - Event → Queue → Worker → Email/SMS.
+
+49. **How do you handle third-party API failure?**
+    - Timeout + retry + fallback response.
+
+50. **How do you make backend scalable?**
+    - Stateless APIs, caching, load balancer, horizontal scaling.
+
+---
+
 
 ---
 > 📌 **Note**  
